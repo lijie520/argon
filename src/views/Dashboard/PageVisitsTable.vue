@@ -5,7 +5,7 @@
         <div class="col">
           <h3 class="mb-0">Page visits</h3>
         </div>
-        <div class="col text-right">
+        <div class="col text-right" @click='testData'>
           <a href="#!" class="btn btn-sm btn-primary">See all</a>
         </div>
       </div>
@@ -51,6 +51,7 @@
 </template>
 <script>
   import { Table, TableColumn, DropdownMenu, DropdownItem, Dropdown} from 'element-ui'
+  import {createArticle} from '../../api/home'
   export default {
     name: 'page-visits-table',
     components: {
@@ -100,6 +101,13 @@
           }
         ]
       }
+    },
+    mounted: {
+    testData() {
+      createArticle().then(response => {
+        console.log(response)
+      })
+    }
     }
   }
 </script>
