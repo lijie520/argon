@@ -5,19 +5,19 @@ function resolveSrc(_path) {
 }
 // vue.config.js
 module.exports = {
-    // options...
-    devServer: {
-      proxy: {
-        '/api': {
-          target: '',   //代理接口
-          changeOrigin: true,
-          pathRewrite: {
-            '^/api': ''    //代理的路径
-          }
+  devServer: {
+    proxy: {
+      "/api": {
+        target: "https://api.douban.com", // 需要跨域的目标url，我这里用到的是豆瓣API
+        changeOrigin: true, // 将基于名称的虚拟托管网站的选项，如果不配置，请求会报404
+        ws: true,
+        pathRewrite: {
+          "^/api": ''
         }
       }
-    },
-  lintOnSave: true,
+    }
+  },
+  // lintOnSave: true,
   configureWebpack: {
     // Set up all the aliases we use in our app.
     resolve: {

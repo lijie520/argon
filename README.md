@@ -239,3 +239,8 @@ Facebook: <https://www.facebook.com/CreativeTim?ref=creativetim>
 Dribbble: <https://dribbble.com/creativetim?ref=creativetim>
 
 Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=creativetim>
+
+
+### node-sass 采用 cnpm
+npm install cnpm -g --registry=https://registry.npm.taobao.org
+cnpm install node-sass@latest

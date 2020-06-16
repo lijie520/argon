@@ -43,6 +43,9 @@ const Lock = () => import(/* webpackChunkName: "pages" */ '@/views/Pages/Lock.vu
 const RegularTables = () => import(/* webpackChunkName: "tables" */ '@/views/Tables/RegularTables.vue');
 const SortableTables = () => import(/* webpackChunkName: "tables" */ '@/views/Tables/SortableTables.vue');
 const PaginatedTables = () => import(/* webpackChunkName: "tables" */ '@/views/Tables/PaginatedTables.vue');
+
+// test
+const Test = () => import(/* webpackChunkName: "tables" */ '@/views/test.vue');
 let componentsMenu = {
   path: '/components',
   component: DashboardLayout,
@@ -184,6 +187,11 @@ let authPages = {
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
     },
     {
       path: '/register',
